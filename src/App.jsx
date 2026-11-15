@@ -68,8 +68,12 @@ function App() {
 
     // Cargar los puntos cuando inicia la aplicación
     useEffect(() => {
-        cargarPuntos();
-    }, []);
+    async function consultarPuntos() {
+        await cargarPuntos();
+    }
+
+    consultarPuntos();
+}, []);
 
     return (
         <div className="contenedor">
