@@ -4,8 +4,10 @@ import "./App.css";
 
 function App() {
 
+    // Estado para almacenar los puntos de reciclaje
     const [puntos, setPuntos] = useState([]);
 
+    // Estados para el formulario
     const [nombre, setNombre] = useState("");
     const [sector, setSector] = useState("");
     const [material, setMaterial] = useState("");
@@ -21,7 +23,7 @@ function App() {
             setPuntos(datos);
 
         } catch (error) {
-            console.error("Error al cargar los puntos:", error);
+            console.error("Error al consultar los puntos:", error);
         }
     };
 
@@ -40,7 +42,7 @@ function App() {
             const respuesta = await fetch("http://localhost:8080/api/puntos", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                "Content-Type": "application/json"
                 },
                 body: JSON.stringify(nuevoPunto)
             });
@@ -59,12 +61,12 @@ function App() {
             cargarPuntos();
 
         } catch (error) {
-            console.error("Error:", error);
+            console.error("Error al registrar:", error);
             alert("No se pudo registrar el punto");
         }
     };
 
-    // Ejecutar la consulta al iniciar la página
+    // Cargar los puntos cuando inicia la aplicación
     useEffect(() => {
         cargarPuntos();
     }, []);
@@ -74,9 +76,9 @@ function App() {
 
             <h1>Sistema de Puntos de Reciclaje</h1>
 
-            <form onSubmit={registrarPunto}>
+            <h2>Registrar punto de reciclaje</h2>
 
-                <h2>Registrar punto de reciclaje</h2>
+            <form>
 
                 <input
                     type="text"
