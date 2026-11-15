@@ -78,7 +78,7 @@ function App() {
 
             <h2>Registrar punto de reciclaje</h2>
 
-            <form>
+            <form onSubmit={registrarPunto}>
 
                 <input
                     type="text"
