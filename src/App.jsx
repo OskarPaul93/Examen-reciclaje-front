@@ -79,6 +79,12 @@ function App() {
         <div className="contenedor">
 
             <h1>Sistema de Puntos de Reciclaje</h1>
+            <div className="etiquetas-reciclaje">
+              <span className="etiqueta-reciclaje">♻️ Recicla</span>
+              <span className="etiqueta-reciclaje">🌱 Reduce</span>
+              <span className="etiqueta-reciclaje">🌎 Reutiliza</span>
+              <span className="etiqueta-reciclaje">💚 Cuida el planeta</span>
+            </div>
 
             <h2>Registrar punto de reciclaje</h2>
 

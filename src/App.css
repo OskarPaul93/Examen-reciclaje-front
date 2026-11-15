@@ -65,3 +65,27 @@ button:hover {
 .tarjeta h3 {
     color: #237a57;
 }
+
+.etiquetas-reciclaje {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0 30px;
+}
+
+.etiqueta-reciclaje {
+    background-color: #dff3e5;
+    color: #237a57;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #b8dfc5;
+}
+
+.etiqueta-reciclaje:hover {
+    background-color: #c5e9d1;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
